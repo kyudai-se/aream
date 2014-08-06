@@ -1,0 +1,55 @@
+<%= form_for(@aream) do |f| %>
+  <% if @aream.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aream.errors.count, "error") %> prohibited this aream from being saved:</h2>
+      <ul>
+      <% @aream.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :entdate %><br>
+    <%= f.text_field :entdate %>
+  </div>
+  <div class="field">
+    <%= f.label :entmcn %><br>
+    <%= f.text_field :entmcn %>
+  </div>
+  <div class="field">
+    <%= f.label :entclt %><br>
+    <%= f.text_field :entclt %>
+  </div>
+  <div class="field">
+    <%= f.label :edtdate %><br>
+    <%= f.text_field :edtdate %>
+  </div>
+  <div class="field">
+    <%= f.label :edtmcn %><br>
+    <%= f.text_field :edtmcn %>
+  <div class="field">
+    <%= f.label :edtclt %><br>
+    <%= f.text_field :edtclt %>
+  </div>
+  <div class="field">
+    <%= f.label :area_cd %><br>
+    <%= f.text_field :area_cd %>
+  </div>
+  <div class="field">
+    <%= f.label :area_j %><br>
+    <%= f.text_field :area_j %>
+  </div>
+  <div class="field">
+    <%= f.label :area_a %><br>
+    <%= f.text_field :area_a %>
+  </div>
+  <div class="field">
+    <%= f.label :area_k %><br>
+    <%= f.text_field :area_k %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<h1>Listing areams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entdate</th>
+      <th>Entmcn</th>
+      <th>Entclt</th>
+      <th>Edtdate</th>
+      <th>Edtmcn</th>
+      <th>Edtclt</th>
+      <th>Area_cd</th>
+      <th>Area_j</th>
+      <th>Area_a</th>
+      <th>Area_k</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @areams.each do |aream| %>
+      <tr>
+        <td><%= aream.entdate %></td>
+        <td><%= aream.entmcn %></td>
+        <td><%= aream.entclt %></td>
+        <td><%= aream.edtdate %></td>
+        <td><%= aream.edtmcn %></td>
+        <td><%= aream.edtclt %></td>
+        <td><%= aream.area_cd %></td>
+        <td><%= aream.area_j %></td>
+        <td><%= aream.area_a %></td>
+        <td><%= aream.area_k %></td>
+        <td><%= link_to 'Show', aream %></td>
+        <td><%= link_to 'Edit', edit_aream_path(aream) %></td>
+        <td><%= link_to 'Destroy', aream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aream', new_aream_path %>
