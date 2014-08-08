@@ -11,42 +11,42 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :entdate %><br>
-    <%= f.text_field :entdate %>
+    <%= f.label :登録日時 %><br>
+    <%= f.text_field :entdate, {style: "ime-mode:disabled"} %>
   </div>
   <div class="field">
-    <%= f.label :entmcn %><br>
+    <%= f.label :登録マシン %><br>
     <%= f.text_field :entmcn %>
   </div>
   <div class="field">
-    <%= f.label :entclt %><br>
+    <%= f.label :登録ユーザー %><br>
     <%= f.text_field :entclt %>
   </div>
   <div class="field">
-    <%= f.label :edtdate %><br>
-    <%= f.text_field :edtdate %>
+    <%= f.label :更新日時 %><br>
+    <%= f.text_field :edtdate, {style: "ime-mode:disabled"} %>
   </div>
   <div class="field">
-    <%= f.label :edtmcn %><br>
+    <%= f.label :更新マシン %><br>
     <%= f.text_field :edtmcn %>
   <div class="field">
-    <%= f.label :edtclt %><br>
+    <%= f.label :更新ユーザー %><br>
     <%= f.text_field :edtclt %>
   </div>
   <div class="field">
-    <%= f.label :area_cd %><br>
-    <%= f.text_field :area_cd %>
+    <%= f.label :地区コード %><br>
+    <%= f.text_field :area_cd, {style: "ime-mode:disabled"} %>
   </div>
   <div class="field">
-    <%= f.label :area_j %><br>
+    <%= f.label :地区名 %><br>
     <%= f.text_field :area_j %>
   </div>
   <div class="field">
-    <%= f.label :area_a %><br>
+    <%= f.label :地区名（略称） %><br>
     <%= f.text_field :area_a %>
   </div>
   <div class="field">
-    <%= f.label :area_k %><br>
+    <%= f.label :地区名（カナ） %><br>
     <%= f.text_field :area_k %>
   </div>
   <div class="actions">

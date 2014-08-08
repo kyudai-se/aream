@@ -1,4 +1,16 @@
 ja:
+  attributes:
+      entdate: "登録日時"
+      entmcn:  "登録マシン"
+      entclt:  "登録ユーザー"
+      edtdate: "更新日時"
+      edtmcn:  "更新マシン"
+      edtclt:  "更新ユーザー"
+      area_cd: "地区コード"
+      area_j:  "地区名"
+      area_a:  "地区名(略称)"
+      area_k:  "地区名(カナ)"
+
   date:
     abbr_day_names:
     - 日

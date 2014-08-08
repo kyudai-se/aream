@@ -1,18 +1,18 @@
-<h1>Listing areams</h1>
+<h1>登録エリア一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Entdate</th>
-      <th>Entmcn</th>
-      <th>Entclt</th>
-      <th>Edtdate</th>
-      <th>Edtmcn</th>
-      <th>Edtclt</th>
-      <th>Area_cd</th>
-      <th>Area_j</th>
-      <th>Area_a</th>
-      <th>Area_k</th>
+      <th>登録日時</th>
+      <th>登録マシン</th>
+      <th>登録ユーザー</th>
+      <th>更新日時</th>
+      <th>更新マシン</th>
+      <th>更新ユーザー</th>
+      <th>地区コード</th>
+      <th>地区名</th>
+      <th>地区名（略称）</th>
+      <th>地区名（カナ）</th>
     </tr>
   </thead>
 
@@ -29,9 +29,9 @@
         <td><%= aream.area_j %></td>
         <td><%= aream.area_a %></td>
         <td><%= aream.area_k %></td>
-        <td><%= link_to 'Show', aream %></td>
-        <td><%= link_to 'Edit', edit_aream_path(aream) %></td>
-        <td><%= link_to 'Destroy', aream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '確認', aream %></td>
+        <td><%= link_to '編集', edit_aream_path(aream) %></td>
+        <td><%= link_to '削除', aream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Aream', new_aream_path %>
+<%= link_to '新規登録', new_aream_path %>

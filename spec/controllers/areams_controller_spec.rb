@@ -99,9 +99,9 @@ RSpec.describe AreamsController, :type => :controller do
     let(:request) { put :update, params}
     context '正しい値を入力した場合' do
       let(:params) { { id: @aream.id, aream: attributes_for(:aream) } }
-      it 'ステータスコード302を返し、showをrenderする' do
+      it 'ステータスコード200を返し、showをrenderする' do
         request
-        response.status.should == 302
+        response.status.should == 200
         response.should render_template('show')
       end
  
@@ -117,7 +117,7 @@ RSpec.describe AreamsController, :type => :controller do
     end
  
     context '異常な値を入力した場合' do
-      let(:params) { { id: @aream.id, aream: attributes_for(:aream, entdate: '') } }
+      let(:params) { { id: @aream.id, aream: attributes_for(:aream, area_cd: '') } }
       it 'ステータスコード200を返し、editをrenderする' do
         request
         response.status.should == 200

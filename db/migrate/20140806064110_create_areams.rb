@@ -1,6 +1,9 @@
 class CreateAreams < ActiveRecord::Migration
   def change
-    create_table "aream", force: true do |t|
+    create_table "aream" do |t|
+
+      add_column :id, :primary_key
+
       t.string  "entdate", limit: 14,                         default: "", null: false
       t.string  "entmcn",  limit: 20,                         default: "", null: false
       t.string  "entclt",  limit: 20,                         default: "", null: false
