@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :aream do
     entdate "20140730000000"
-    sequence(:area_cd) { |n| "100*#{n}" }
+    area_cd "100"
 #    sequence(:area_j)  { |j| "鳥取県#{j}" }
 #    sequence(:area_a)  { |a| "#{a}市" }
 #    sequence(:area_k)  { |k| "#{k}" }
