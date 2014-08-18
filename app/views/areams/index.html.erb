@@ -19,10 +19,10 @@
   <tbody>
     <% @areams.each do |aream| %>
       <tr>
-        <td><%= aream.entdate %></td>
+        <td><%= aream.entdate.to_s(:db) %></td>
         <td><%= aream.entmcn %></td>
         <td><%= aream.entclt %></td>
-        <td><%= aream.edtdate %></td>
+        <td><%= aream.edtdate.try(:strftime,'%Y-%m-%d %H:%M:%S') %></td>
         <td><%= aream.edtmcn %></td>
         <td><%= aream.edtclt %></td>
         <td><%= aream.area_cd %></td>

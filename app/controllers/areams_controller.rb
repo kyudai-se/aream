@@ -1,3 +1,5 @@
+require 'date'
+
 class AreamsController < ApplicationController
   before_action :set_aream, only: [:show, :edit, :update, :destroy]
 
@@ -25,7 +27,7 @@ class AreamsController < ApplicationController
   # POST /areams.json
   def create
     @aream = Aream.new(aream_params)
-
+    @aream.entdate = Time.now
     respond_to do |format|
       if @aream.save
         format.html { redirect_to @aream, notice: 'Aream was successfully created.' }
@@ -40,6 +42,7 @@ class AreamsController < ApplicationController
   # PATCH/PUT /areams/1
   # PATCH/PUT /areams/1.json
   def update
+    @aream.edtdate = Time.now
     respond_to do |format|
       if @aream.update(aream_params)
         format.html { redirect_to @aream, notice: 'Aream was successfully updated.' }

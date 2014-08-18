@@ -1,14 +1,11 @@
+require 'nkf'
+
 class Aream < ActiveRecord::Base
 self.table_name = 'aream'
 
-require 'nkf'
-
 before_validation { self.area_k  = NKF.nkf('-w -Z4 -x', area_k) }
-validates :entdate, presence: true, length: { maximum: 14 }, numericality: true
 validates :entmcn,  length: { maximum: 20 }
 validates :entclt,  length: { maximum: 20 }
-validates :edtdate, length: { maximum: 14 }, numericality: true,
-          allow_blank: true
 validates :edtmcn,  length: { maximum: 20 }
 validates :edtclt,  length: { maximum: 20 }
 validates :area_cd, presence: true, length: { maximum: 04 }, uniqueness: true,
